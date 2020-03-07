@@ -1,0 +1,15 @@
+name: 'SecretPage'
+description: 'Generate a secret page in GitHub.'
+inputs:
+  src:
+    description: 'directory path to source files'
+    required: true
+  dist:
+    description: 'directory path to distribution files'
+    required: true
+outputs:
+  ret:
+    description: 'return code'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

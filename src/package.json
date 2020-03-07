@@ -1,0 +1,29 @@
+{
+  "name": "secret-page",
+  "version": "0.0.1",
+  "description": "GitHub Actions for Generate SecretPage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo hello world"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bunniescc/SecretPage.git"
+  },
+  "keywords": [
+    "SecretPage"
+  ],
+  "author": "IvanLu <me@ivanlu.cn>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bunniescc/SecretPage/issues"
+  },
+  "homepage": "https://github.com/bunniescc/SecretPage#readme",
+  "dependencies": {
+    "@actions/core": "1.2.2",
+    "@actions/github": "2.1.0"
+  },
+  "devDependencies": {
+
+  }
+}
