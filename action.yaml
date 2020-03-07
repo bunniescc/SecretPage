@@ -7,6 +7,9 @@ inputs:
   dist:
     description: 'directory path to distribution files'
     required: true
+  root:
+    description: 'page root'
+    required: false
   password:
     description: 'aes password'
     required: false
