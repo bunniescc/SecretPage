@@ -1,5 +1,15 @@
 # SecretPage 
 
+## Get Dist Repo Template
+
+Clone the repo
+
+```shell script
+clone https://github.com/bunniescc/secret
+```
+
+you should change something.
+
 ## Generate a deploy key
 
 you can run in shell like this
