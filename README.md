@@ -77,7 +77,7 @@ jobs:
 
     - name: mkdir
       run: |
-        mkdir -p dist/asset
+        mkdir -p dist/site_asset
 
     - name: generate pages
       uses: bunniescc/SecretPage@master

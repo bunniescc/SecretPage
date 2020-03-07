@@ -6,7 +6,7 @@ const src = core.getInput('src');
 const dist = core.getInput('dist');
 
 const SRC = src.endsWith('/') ? src : (src + '/');
-const DIST = (dist.endsWith('/') ? dist : (dist + '/')) + '_asset/';
+const DIST = (dist.endsWith('/') ? dist : (dist + '/')) + 'site_asset/';
 
 console.log('Secret Page Generator');
 console.log('src', src, 'dist', dist);
