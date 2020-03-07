@@ -5,8 +5,10 @@ let fs = require('fs');
 const src = core.getInput('src');
 const dist = core.getInput('dist');
 
-console.log(src);
-console.log(dist);
+const SRC = src.endsWith('/') ? src : (src + '/');
+const DIST = dist.endsWith('/') ? dist : (dist + '/');
+
+console.log('SRC', SRC, 'DIST', DIST);
 
 function base64_encode(file) {
     let f = fs.readFileSync(file);
@@ -27,17 +29,17 @@ const checkDirExist = (folderpath) => {
 };
 
 function processDir(dir, parent) {
-    fs.readdirSync(parent + dir + '/').forEach(f => {
-        if (f.startsWith(".")) return;
-        let info = fs.statSync(parent + dir + '/' + f);
+    let curDir = parent + dir + '/';
+    fs.readdirSync(SRC + curDir).forEach(f => {
+        let info = fs.statSync(SRC + curDir + f);
         if (info.isDirectory()) {
-            processDir(f, parent + dir + '/')
+            processDir(f, curDir)
         } else {
-            checkDirExist('./' + dist + '/asset/' + parent + dir + '/');
-            fs.writeFileSync('./' + dist + '/asset/' + parent + dir + '/' + f + ".spf", base64_encode(parent + dir + '/' + f))
-            console.log(parent + dir + '/' + f);
+            checkDirExist(DIST + curDir);
+            fs.writeFileSync(DIST + curDir + f + ".txt", base64_encode(SRC + curDir + f));
+            console.log(curDir + f);
         }
     });
 }
 
-processDir('./' + src, '');
+processDir('', '');
