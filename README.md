@@ -63,15 +63,15 @@ jobs:
     
     - name: configGit
       env:
-        GITHUB_EMAIL: ${{ secret.GITHUB_EMAIL }}
-        GITHUB_USERNAME: ${{ secret.GITHUB_USERNAME }}
+        GITHUB_EMAIL: ${{ secrets.GITHUB_EMAIL }}
+        GITHUB_USERNAME: ${{ secrets.GITHUB_USERNAME }}
       run: |
         git config --global user.email "$GITHUB_EMAIL"
         git config --global user.name "$GITHUB_USERNAME"
     
     - name: clone dist page repo
       env:
-        PAGE_REPO: ${{ secret.PAGE_REPO }}
+        PAGE_REPO: ${{ secrets.PAGE_REPO }}
       run: |
         git clone git@github.com:$PAGE_REPO.git dist
 
