@@ -34,7 +34,7 @@ function processDir(dir, parent) {
             processDir(f, parent + dir + '/')
         } else {
             checkDirExist('./' + dist + '/asset/' + parent + dir + '/');
-            fs.writeFileSync('./' + dist + '/asset/' + parent + dir + '/' + f + ".txt", base64_encode(parent + dir + '/' + f))
+            fs.writeFileSync('./' + dist + '/asset/' + parent + dir + '/' + f + ".spf", base64_encode(parent + dir + '/' + f))
             console.log(parent + dir + '/' + f);
         }
     });
