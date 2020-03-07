@@ -1,5 +1,19 @@
 # SecretPage 
 
+## Generate a deploy key
+
+you can run in shell like this
+
+```shell script
+ssh-keygen -f spdk
+```
+
+and you will get two files ```spdk.pub``` and ```spdk```
+
+add content of ```spdk.pub``` to the repo of Github Pages in ```Setting  >  Deploy keys```
+
+and the content of ```spdk``` should add to the repo of origin files in ```Setting  >  Secrets```
+
 ## Example Action
 
 you **must** add those KEY in repo's secret.
