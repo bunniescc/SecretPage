@@ -32,6 +32,7 @@ const checkDirExist = (folderpath) => {
 function processDir(dir, parent) {
     let curDir = parent + dir + '/';
     fs.readdirSync(SRC + curDir).forEach(f => {
+        if (f.startsWith('.')) return;
         let info = fs.statSync(SRC + curDir + f);
         if (info.isDirectory()) {
             processDir(f, curDir)
