@@ -30,7 +30,7 @@ you **must** add those KEY in repo's secret.
 
 | KEY | Description |
 | :--- | :--- |
-| DIST_PAGE_REPO | the repo for Github Page like ```username/repo``` |
+| PAGE_REPO | the repo for Github Page like ```username/repo``` |
 | SECRET_PAGE_DEPLOY_KEY | the SSH key for deploying |
 | GITHUB_EMAIL | the email of Committer of dist while update |
 | GITHUB_USERNAME | the username of Committer of dist while update |
