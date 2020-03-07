@@ -1,9 +1,9 @@
 const core = require('@actions/core');
-const github = require('@actions/github');
 
 let fs = require('fs');
 const src = core.getInput('src');
 const dist = core.getInput('dist');
+const password = core.getInput('password');
 
 const SRC = src.endsWith('/') ? src : (src + '/');
 const DIST = (dist.endsWith('/') ? dist : (dist + '/')) + 'site_asset/';
@@ -11,6 +11,7 @@ const DIST = (dist.endsWith('/') ? dist : (dist + '/')) + 'site_asset/';
 console.log('Secret Page Generator');
 console.log('src', src, 'dist', dist);
 console.log('SRC', SRC, 'DIST', DIST);
+console.log('password', password);
 
 function base64_encode(file) {
     let f = fs.readFileSync(file);

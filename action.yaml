@@ -7,6 +7,9 @@ inputs:
   dist:
     description: 'directory path to distribution files'
     required: true
+  password:
+    description: 'aes password'
+    required: false
 outputs:
   ret:
     description: 'return code'
