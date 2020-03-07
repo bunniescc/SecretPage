@@ -38,7 +38,7 @@ function processDir(dir, parent) {
             processDir(f, curDir)
         } else {
             checkDirExist(DIST + curDir);
-            fs.writeFileSync(DIST + curDir + f + ".txt", base64_encode(SRC + curDir + f));
+            fs.writeFileSync(DIST + curDir + f + ".spf", base64_encode(SRC + curDir + f));
             console.log(curDir + f);
         }
     });
