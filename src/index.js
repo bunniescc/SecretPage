@@ -6,8 +6,9 @@ const src = core.getInput('src');
 const dist = core.getInput('dist');
 
 const SRC = src.endsWith('/') ? src : (src + '/');
-const DIST = dist.endsWith('/') ? dist : (dist + '/');
+const DIST = (dist.endsWith('/') ? dist : (dist + '/')) + '_asset/';
 
+console.log('src', src, 'dist', dist);
 console.log('SRC', SRC, 'DIST', DIST);
 
 function base64_encode(file) {
